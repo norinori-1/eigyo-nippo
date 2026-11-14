@@ -1,0 +1,9 @@
+.streamlit/secrets.toml
+.env
+__pycache__/
+*.pyc
+.DS_Store
+_backup/
+venv/
+.venv/
+デモ動画台本.md
