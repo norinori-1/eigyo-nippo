@@ -71,6 +71,7 @@ with st.sidebar:
         help="入れると、日報への整理にClaudeを使います。",
     )
     st.caption("どちらか1つあれば動きます。secrets.toml に設定済みなら入力不要です。")
+    st.caption("🔒 入力したキーは、この画面を開いている間だけ使われます。アプリには保存されません。")
 
 
 # ---------- 状態の初期化 ----------
@@ -285,6 +286,13 @@ def sample_report(visit_date: date) -> dict:
 # ---------- 画面 ----------
 st.title("📝 営業日報メモ")
 st.caption("商談のあとに話すだけで、日報の形に整理します。")
+
+if not (get_key("OPENAI_API_KEY") or get_key("ANTHROPIC_API_KEY")):
+    st.info(
+        "**はじめての方へ：** APIキーがなくても、①の下にある「🧪 サンプルで試す」を押すと、"
+        "話した内容が日報に整理される流れを体験できます。\n\n"
+        "ご自身の声で試す場合は、左上の » から設定を開き、OpenAIのAPIキーを入力してください。"
+    )
 
 visit_date = st.date_input("訪問日", value=datetime.now(JST).date())
 
