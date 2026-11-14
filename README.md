@@ -6,6 +6,8 @@ B2B営業の現場経験をもとに、「日報は大事だが、書く時間�
 
 ▶ **デモ動画（約90秒）：** https://youtube.com/shorts/CvW0hgxGIY4
 
+▶ **ブラウザで試す（APIキー不要のサンプルつき）：** https://eigyo-nippo-8msrkvm5krthjpzykqlpbi.streamlit.app/
+
 ## 解決したい課題
 
 - 外回りの営業は、帰社後や移動中にまとめて日報を書くため、**記憶が薄れて内容が粗くなる**
